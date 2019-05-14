@@ -1,10 +1,12 @@
 {
-  "name": "prueba",
+  "name": "reto-rimac",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "firebase": "^6.0.2",
     "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
@@ -32,7 +34,15 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.13.0",
+    "gh-pages": "^2.0.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0",
+    "eslint-plugin-react-hooks": "^1.6.0"
   },
-  "homepage": "https://janetgm.github.io/prueba/"
+  "homepage": "https://janetgm.github.io/Reto-Rimac/"
 }
