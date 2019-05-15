@@ -2,22 +2,15 @@
     color: #494f66;
 }
 .card {
-    margin: 0 10% 0 10%;
+    margin: 1% 10% 0 10%;
     box-shadow: 0 3px 4px 0 rgba(50,50,50,.36);
     border-radius: 6px;
 }
 
-.casos-icon, .h3 {
-    margin-left: 75%;
-}
 
-.casos-icon {
-    margin-top: -18%;
-}
 
-.h3 {
-    margin-top: -6%;
-}
+
+
 
 .subtitle{
     border-bottom: 1px solid #8a8e8e;
@@ -31,7 +24,7 @@
     line-height: 1.1;
 }
 .ajustes-icon {
-    width: 30px;
+    width: 60px;
     margin-left: 50%;
     margin-top: 5%;
 }
@@ -64,7 +57,7 @@
 }
 
 .box-r {
-    margin-top: -14%;
+    margin-top: -7%;
 }
 
 
@@ -84,6 +77,9 @@ p {
 
 table {
     margin-left: 2%;
+}
+.margin{
+    margin: 0 30px 0 30px;
 }
 
 .deducible h3{
@@ -109,7 +105,7 @@ form{
     display: inline-flex;
     align-content: center;
     justify-content: center;
-    width: 30em;
+    width: 27.4em;
     height: 2em;
     padding: .5em 0;
     margin: .25rem;
@@ -129,4 +125,33 @@ form{
 	align-items: center;
 	justify-content: center;
   }
+
+  .form-control-width{
+      width: 99px;
+  }
+  
+
+  .btn-green{
+    width: 286px;
+    height: 42px;
+    margin: 0 1%;
+    color: white;   
+    font-weight: 600;
+    background: #81BB00;
+    border-radius: 6px;
+  }
+
+  
+  .btn-gray{
+    width: 286px;
+    height: 42px;
+    padding: 0;
+    margin: 0 1%;
+    color: white;   
+    font-weight: 600;
+    background: #8A8E8E;
+    border-radius: 6px;
+  }
+
+ 
   

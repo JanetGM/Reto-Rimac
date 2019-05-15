@@ -18,7 +18,7 @@ const InfoTaller = ({}) => (
                 <td scope="col">Horas del taller</td>
                 <td scope="col"> 
                 <form>
-                    <input type="number" name="quantity" min="1" max="100"></input>
+                    <input type="number" name="quantity" min="1" max="100" className="form-control form-control-width"></input>
                 </form> 
                 </td>
             </tr>
@@ -39,7 +39,7 @@ const InfoTaller = ({}) => (
                 <td scope="col">Horas del taller</td>
                 <td scope="col"> 
                 <form>
-                    <input type="number" name="quantity" min="1" max="100"></input>
+                    <input type="number" name="quantity" min="1" max="100" className="form-control form-control-width"></input>
                 </form> 
                 </td>
             </tr>
