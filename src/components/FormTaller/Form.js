@@ -40,7 +40,7 @@ const Form = ({ sendToDB, values }) => {
       <div className="card mt-5">
         <div className="row">
           <form className="col-sm-12" onSubmit={handleSubmit(onSubmit)}>
-            <h3 className="col-sm-12 text-center">DATOS DE TALLER</h3>
+            <h3 className="col-sm-12 text-center subtitle">DATOS DE TALLER</h3>
             <div className="form-group col-sm-3">
               <label htmlFor="nametaller">NOMBRE DEL TALLER</label>
               <br />
@@ -70,7 +70,7 @@ const Form = ({ sendToDB, values }) => {
             </div>
 
             <div className="row justify-content-lg-center">
-              <h3 className="col-sm-12 text-center">DATOS DE VEHICULO</h3>
+              <h3 className="col-sm-12 text-center subtitle">DATOS DE VEHICULO</h3>
               <div className="form-group col-sm-3">
                 <label htmlFor="fecha">Fecha de Ingreso:</label>
                 <br />
@@ -143,7 +143,7 @@ const Form = ({ sendToDB, values }) => {
                 {' '}
                 {/* error message */}
               </div>
-              <h3 className="col-sm-12 text-center">DATOS DE CONTACTO:</h3>
+              <h3 className="col-sm-12 text-center subtitle">DATOS DE CONTACTO:</h3>
               <div className="form-group col-sm-3">
                 <label htmlFor="firstname">NOMBRE:</label>
                 <br />
@@ -222,7 +222,7 @@ const Form = ({ sendToDB, values }) => {
             </div>
 
             <div className="row justify-content-lg-center">
-              <h3 className="col-sm-12 text-center">PRESUPUESTO</h3>
+              <h3 className="col-sm-12 text-center subtitle">PRESUPUESTO</h3>
               <div className="form-group col-sm-3">
                 <input className="input-border" placeholder="planchado" name="planchado" ref={register} />
                 <input className="input-border" placeholder="cant" name="cantidadPlanchado" ref={register} />

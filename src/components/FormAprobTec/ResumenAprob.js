@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 const ResumenAprob = () => {
     let [porcentaje, setPorcentaje] = useState("");
     let [reparacion, setReparacion] = useState("");
@@ -14,9 +13,9 @@ const deducible = () => {
     
 }
     return( 
-        <div>
-        <div classNameName="deducible card ">
-        <h3>Información del siniestro</h3>
+        <div> 
+        <div classNameName="card ">
+        <h3 className="subtitle">Información del siniestro</h3>
         <form>
             <div className="form-group row">
                 <label htmlFor="inputEmail3" className="col-md-3 col-form-label">Número de caso</label>
@@ -67,8 +66,8 @@ const deducible = () => {
         </form>
     </div>
     <div>
-    <div classNameName="deducible card ">
-        <h3>Resumen de Aprobación</h3>
+    <div classNameName="card ">
+        <h3 className="subtitle">Resumen de Aprobación</h3>
         <form>
             <div className="form-group row">
                 <label htmlFor="inputEmail3" className="col-md-3 col-form-label">Planchado</label>

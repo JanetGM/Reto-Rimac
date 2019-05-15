@@ -7,7 +7,7 @@
     border-radius: 6px;
 }
 
-.casos-icon, h3 {
+.casos-icon, .h3 {
     margin-left: 75%;
 }
 
@@ -15,10 +15,21 @@
     margin-top: -18%;
 }
 
-h3 {
+.h3 {
     margin-top: -6%;
 }
 
+.subtitle{
+    border-bottom: 1px solid #8a8e8e;
+    display: block;
+    padding-bottom: 4px;
+    font-weight: 700;
+    font-size: 1.17em;
+    text-align: left;
+    margin: 10px;
+    margin-top: 60px;
+    line-height: 1.1;
+}
 .ajustes-icon {
     width: 6%;
     margin-left: 80%;
@@ -55,9 +66,7 @@ h3 {
     margin-top: -7%;
 }
 
-.datos-vehiculo {
-    height: 740px;
-}
+
 
 .next {
     margin-left: 45%;
@@ -94,3 +103,29 @@ form{
     width: 88%;
     margin: 0 auto;
 }
+
+.bs-stepper-circle {
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    width: 30em;
+    height: 2em;
+    padding: .5em 0;
+    margin: .25rem;
+    line-height: 1em;
+    color: #fff;
+    background-color: #6c757d;
+    border-radius: 0;
+  }
+  
+  .active .bs-stepper-circle {
+    background-color: #ff0800;
+  }
+
+  .center{
+    text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
