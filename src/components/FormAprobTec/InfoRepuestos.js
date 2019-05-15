@@ -1,12 +1,31 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useCollection } from 'react-firebase-hooks/firestore';
+import db from '../../lib/firestore';
 
-const InfoRepuestos = ({description, quantity, code, availability, money, unitPrice, totalPrice, vb, newQuantity}) => (
-    <div>
-        <h3 className="subtitle">Repuestos</h3>
-        <table className="Taller table table-hover">
-        <thead>
-            <tr>
+
+const InfoRepuestos = ({ repuesto, cantidadRepuesto }) => {
+  const { error, loading, value } = useCollection(
+    db.collection('proveedor'),
+  );
+
+  return (
+    <>
+      {error && (
+      <strong>
+Error:
+  {' '}
+  {error}
+</strong>
+      )}
+      {loading && <span>Collection: Loading...</span>}
+      {value && (
+        <span>
+          {value.docs.map(doc => (
+            <div key={doc.id}>
+            <h3 className="subtitle">Repuestos</h3>
+          <table className="Taller table table-hover">
+                <thead>
+              <tr>
                 <th scope="col">Descripción</th>
                 <th scope="col">Cantidad</th>
                 <th scope="col">Código</th>
@@ -16,28 +35,41 @@ const InfoRepuestos = ({description, quantity, code, availability, money, unitPr
                 <th scope="col">P.Total sin IGV</th>
                 <th scope="col">VB</th>
                 <th scope="col">Cantidad</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td scope="col">Datos de repuesto</td>
-                <td scope="col">Cant</td>
-                <td scope="col"> Codigo</td>
-                <td scope="col"> Codigo</td>
-                <td scope="col"> Codigo</td>
-                <td scope="col"> Codigo</td>
-                <td scope="col"> Codigo</td>
-                <td scope="col"> Codigo</td>
+              </tr>
+            </thead>
+                <tbody>
+              <tr>
+                <td scope="col">{repuesto}</td>
+                <td scope="col">{cantidadRepuesto}</td>
                 <td scope="col">
-                <form>
-                <input className="form-control" type="number" name="quantity" min="1" max="100"></input>
-                </form>  
+                  {' '}
+                  {doc.data().code}
                 </td>
-            </tr>
-        </tbody>
-        </table>
-    </div>
-)
+                <td scope="col"> Stock </td>
+                <td scope="col"> $USD </td>
+                <td scope="col"> {doc.data().precio} </td>
+                <td scope="col"> {cantidadRepuesto * doc.data().precio}</td>
+                <td scope="col"> 
+                <select id="disponibilidad" className="margin">
+                  <option value="de-acuerdo" selected>DE ACUERDO</option>
+                  <option value="desacuerdo">EN DESACUERDO</option>
+                </select>
+                </td>
+                <td scope="col">
+                  <form>
+                    <input type="number" name="quantity" min="1" max="100" onChange={e => sessionStorage.setItem('cantRepuestos', e.target.value)}/>
+                  </form>
+                </td>
+              </tr>
+            </tbody>
+              </table>
+            </div>
+          ))}
+        </span>
+      )}
+    </>
+  );
+};
 export default InfoRepuestos;
 
 /*

@@ -4,11 +4,12 @@ import db from '../../lib/firestore';
 
 import Precio from './Precio';
 
-const Pedido = ({info,updateState}) => {
+const Pedido = ({info,updateState,inputValue}) => {
   const [code, setCode] = useState('');
-  const [comentario, setComentario]=useState('');
+  const [comentario, setComentario] = useState('');
   const [dias, setDias] = useState('');
   console.log(info);
+
   const { error, loading, value } = useCollection(
     db.collection('Compras'),
   );
@@ -20,14 +21,14 @@ const Pedido = ({info,updateState}) => {
    
   return (
     <div>
-      <div className="row"><h1>Pedido</h1></div>
+      <div className="row subtitle"><h1>Pedido</h1></div>
       <div className="row weigth font-mayor">
-        <div className="col-2">DESCRIPCIÓN</div>
-        <div className="col-2">CANTIDAD</div>
-        <div className="col-2">CÓDIGO</div>
-        <div className="col-2">PRECIO</div>
-        <div className="col-2">DISPONIBILIDAD</div>
-        <div className="col-2">DÍAS</div>
+        <div className="font-weight-bold col-2">DESCRIPCIÓN</div>
+        <div className="font-weight-bold col-2">CANTIDAD</div>
+        <div className="font-weight-bold col-2">CÓDIGO</div>
+        <div className="font-weight-bold col-2">PRECIO</div>
+        <div className="font-weight-bold col-2">DISPONIBILIDAD</div>
+        <div className="font-weight-bold col-2">DÍAS</div>
       </div>
       {error && <strong>Error: {error}</strong>}
       {loading && <span>Collection: Loading...</span>}
@@ -39,7 +40,7 @@ const Pedido = ({info,updateState}) => {
               <div className="col-2">{doc.data().cantidad}</div>
               <div className="col-2">
                 <input
-                  className="width-input"
+                  className="form-control width-input"
                   type="text"
                   value={code}
                   onChange={e => setCode(e.target.value)}
@@ -48,22 +49,22 @@ const Pedido = ({info,updateState}) => {
                   required
                 />
               </div>
-              <div className="col-2 padding">{code && <Precio code={code} />}</div>
+              <div className="col-2 padding">{code && <Precio code={code} inputValue={inputValue} />}</div>
               <div className="col-2">
-                <select id="disponibilidad" className="margin">
-                  <option disabled selected>STOCK</option>
-                  <option value="Water">IMPORTADO</option>
+                <select id="disponibilidad" className="form-control margin">
+                  <option value="Stock" selected>STOCK</option>
+                  <option value="Importado">IMPORTADO</option>
                 </select>
               </div>
-              <div className="col-2"><input type="text" className="width-input-dias" value={dias}
+              <div className="col-2"><input type="text" className="form-control width-input-dias" value={dias}
                 onChange={e => setDias(e.target.value)} /></div>
             </div>
           ))}
         </span>
       )}
-      <div className="row"><h1>Comentarios</h1></div>
+      <div className="subtitle form-group row"><h5>Comentarios</h5></div>
       <div className="row">
-        <textarea rows="3" cols="25" id='comentarios' placeholder='Escribe algo...' value={comentario}
+        <textarea className="form-control" rows="3" cols="25" id='comentarios' placeholder='Escribe algo...' value={comentario}
                   onChange={e => setComentario(e.target.value)}>
         </textarea>
       </div>
