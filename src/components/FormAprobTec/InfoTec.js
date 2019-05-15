@@ -10,12 +10,12 @@ const InfoTec = () => {
     <div>
       <div className="card p-10">
         <div className="card-body">
-          <div className="item-1">
-            <img className="tecnico-ico" src="https://i.ibb.co/MBHWsfq/tecnico.png" alt="Smiley face" />
+          <div className="block">
+            <img className="block" src="https://i.ibb.co/MBHWsfq/tecnico.png" alt="Smiley face" />
             <h2>Técnico especialista</h2>
           </div>
-          <img className="casos-icon" src="https://i.ibb.co/VqsFFnr/casos.png" alt="Smiley face" />
-          <h3>Mis Casos</h3>
+          <img className="block" src="https://i.ibb.co/VqsFFnr/casos.png" alt="Smiley face" />
+          <h3 className="block">Mis Casos</h3>
         </div>
       </div>
       <div className="card m-3">

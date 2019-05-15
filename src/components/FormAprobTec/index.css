@@ -100,7 +100,7 @@ margin-top: -7%;
     margin-left: 2%;
 }
 
-.box-right, .box-r {
+.box-right {
     margin-left: 30%;
 }
 
@@ -109,7 +109,7 @@ margin-top: -7%;
 }
 
 .box-r {
-    margin-top: -14%;
+    margin-top: -12%;
 }
 
 .datos-vehiculo {
@@ -139,6 +139,11 @@ margin-left: -36%;
 
 p {
     margin-left: 65%;    
+}
+
+.info {
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 /* Tabla de stepper 2*/
@@ -217,3 +222,23 @@ form{
     background: #8A8E8E;
     border-radius: 6px;
   }
+
+  .block{
+    margin: 0;
+    padding: 10px;
+    display: inline-block;
+
+}
+
+
+.ajustes-icon1 {
+   
+    margin-left: 80%;
+    margin-top: -22%;
+}
+
+
+.ajustes-text1 {
+    margin-left: 77%;
+    margin-top: -7%;
+}
