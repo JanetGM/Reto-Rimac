@@ -12,7 +12,6 @@ const app = () => (
       <Route path="/" exact component={FormTaller} />
       <Route path="/proveedor" exact component={FormProv} />
       <Route path="/tech" component={FormAprobTec} />
-      <Route path="/formProv" component={FormProv} />
     </Switch>
   </Layout>
 );
