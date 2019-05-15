@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Layout from './components/Layout';
+import FormTaller from './components/FormTaller'
+import FormProv from './components/FormProv';
+import FormAprobTec from './components/FormAprobTec';
 
-export default App;
+const app = () => (
+  <Layout>
+    <Switch>
+      <Route path="/taller" exact component={FormTaller} />
+      <Route path="/proveedor" exact component={FormProv} />
+      <Route path="/tech" component={FormAprobTec} />
+    </Switch>
+  </Layout>
+);
+
+export default app;
