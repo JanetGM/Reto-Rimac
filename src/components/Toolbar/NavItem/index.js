@@ -11,8 +11,7 @@ const navItem = ({
     <NavLink
       to={link}
       exact={exact}
-      activeClassName={styles.active}
-    >
+      activeClassName={styles.active} >
       {children}
 
     </NavLink>
