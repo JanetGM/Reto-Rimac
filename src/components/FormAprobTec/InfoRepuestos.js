@@ -30,7 +30,7 @@ const InfoRepuestos = ({description, quantity, code, availability, money, unitPr
                 <td scope="col"> Codigo</td>
                 <td scope="col">
                 <form>
-                <input className="form-control form-control-width" type="number" name="quantity" min="1" max="100"></input>
+                <input className="form-control" type="number" name="quantity" min="1" max="100"></input>
                 </form>  
                 </td>
             </tr>

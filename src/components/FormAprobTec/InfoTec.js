@@ -1,76 +1,52 @@
 import React from 'react';
-import { useCollection } from 'react-firebase-hooks/firestore';
-import db from '../../lib/firestore';
 
-const InfoTec = () => {
-  const { error, loading, value } = useCollection(
-    db.collection('compras'),
-  );
-  return (
-    <div>
-      <div className="card p-10">
-        <div className="card-body center ">
-          <div className="m-6 center  margin">
-            <img className="tecnico-ico  margin" src="https://i.ibb.co/MBHWsfq/tecnico.png" alt="Smiley face" />
-            <h2>Técnico especialista</h2>
-          </div>
-          <div className="m-6 center margin">
-          <img className="casos-icon  margin" src="https://i.ibb.co/VqsFFnr/casos.png" alt="Smiley face" />
-          <h2>Mis Casos</h2>
-          </div>
+const InfoTec = () => (
+  <div>
+    <div className="card p-10">
+      <div className="card-body">
+        <div className="block">
+          <img className='block' src="https://i.ibb.co/MBHWsfq/tecnico.png" alt="Smiley face"></img>
+          <h2  className='block'>Técnico especialista</h2>
         </div>
-      </div>
-      <div className="card m-6">
-        <div className="box-left">
-          {error && <strong>Error: {error}</strong>}
-          {loading && <span>Collection: Loading...</span>}
-          {value && (
-          <span>
-            {value.docs.map(doc => (
-              <div className="row" key={doc.id}>
-                <div className="col-4">
-                  <div className="row">
-                    <span>
-                      Nombre: 
-                      {doc.data().firstname}
-                      {doc.data().lastname}
-                    </span>
-                  </div>
-                  <div className="row">
-                    <span>
-                      Placa: 
-                      {doc.data().placa}
-                    </span>
-                  </div>
-                </div>
-                <div className="col-4 ">
-                  <div className="row">
-                    <span>
-                    Fecha:
-                      {doc.data().fecha}
-                    </span>
-                  </div>
-                  <div className="row">
-                    <span>
-                      Taller:
-                      {doc.data().nametaller}
-                    </span>
-                  </div>
-                </div>
-                <div className="col-4">
-                  <img className="ajustes-icon" src="https://i.ibb.co/gPbPWqD/ajustar-presupuesto.png" alt="Smiley face" />
-                  <div className="ajustes-text">
-                    <span>Presupuesto por Ajustar</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </span>
-          )}
+        <div className="block">
+          <img className='block' src="https://i.ibb.co/VqsFFnr/casos.png" alt="Smiley face" />
+          <h2 className="block">Mis Casos</h2>
         </div>
       </div>
     </div>
-  );
-};
+    <div className="card">
+      <div className="box-left">
+        <div className="info"><span className="font-weight-bold">Nombre: </span><br></br>
+          <span><span >
+            jhonatan gonzales</span></span>
+        </div>
+        <div className="info">
+          <span className="font-weight-bold">Placa: <br></br>
+          </span><span>AGK123</span>
+        </div>
+        <div className="info"><span className="font-weight-bold">Fecha de registro: </span> <br></br>
+          <span>20/02/2019 05:05 PM</span>
+        </div>
+      </div>
+      <div className="box-right">
+        <div className="info"><span className="font-weight-bold">Presupuesto elaborado: </span><br></br>
+          <span>20/02/2019 05:07 PM</span>
+        </div>
+        <div className="info">
+          <span className="font-weight-bold">Taller: </span><br></br>
+          <span>SIN TALLER</span>
+        </div>
+        <div className="info"><span className="font-weight-bold">Sede: <br></br>
+        </span><span>SIN SEDE</span>
+        </div>
+      </div>
+      <div className="estado">
+        <img className="ajustes-icon1" src="https://i.ibb.co/gPbPWqD/ajustar-presupuesto.png" alt="Smiley face" />
+        <div className="ajustes-text1"><span>Presupuesto por Ajustar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+)
 
 export default InfoTec;
