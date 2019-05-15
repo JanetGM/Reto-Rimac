@@ -7,6 +7,8 @@ import './index.css';
 import InfoTec from './InfoTec';
 import InfoVehiculo from './InfoVehiculo';
 import ResumenAprob from './ResumenAprob';
+import InfoRepuestos from './InfoRepuestos';
+import InfoTaller from './InfoTaller';
 
 class App extends Component {
   constructor() {

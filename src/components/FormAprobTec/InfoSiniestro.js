@@ -2,7 +2,7 @@ import React from 'react';
 
 const InfoSiniestro = () => (
 <div className="deducible card ">
-<h3>Información del siniestro</h3>
+<h3 className="subtitle">Información del siniestro</h3>
 <form>
     <div class="form-group row">
         <label for="inputEmail3" class="col-md-3 col-form-label">Número de caso</label>

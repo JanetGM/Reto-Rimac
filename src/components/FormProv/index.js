@@ -20,7 +20,7 @@ const Index = () =>{
     <form>
      <InfoFormTaller info={info} updateState={updateState}  />
      <Pedido info={info} updateState={updateState} inputValue={data => setPrecio(data)} />
-     <button type="button" onClick={saveInFirebase}>Enviar</button>
+     <button  className="btn btn-primary" type="button" onClick={saveInFirebase}>Enviar</button>
     </form>
    
  )

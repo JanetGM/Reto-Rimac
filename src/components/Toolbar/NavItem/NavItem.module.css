@@ -6,7 +6,8 @@
 }
 
 .NavItem a {
-    color: #7D0000;
+    color: #8a8892;
+    opacity: 0.5;
     text-decoration: none;
     width: 100%;
     box-sizing: border-box;
@@ -14,13 +15,12 @@
     font-weight: bold;
     float: right;
     border-radius: 2px;
-
 }
 
 .NavItem a:hover,
 .NavItem a:active,
 .NavItem a.active {
-    color: #EAA81B;
+    color: white;
 }
 
 /* @media (min-width: 500px) {
@@ -33,20 +33,20 @@
     }
     
     .NavItem a {
-        color: #EAA81B;
+        color: white;
         height: 100%;
         padding: 16px 10px;
         font: inherit;
         font-weight: bold;
-        background-color: #7D0000;
+        background-color: #ef3340;
         
     }
     
     .NavItem a:hover,
     .NavItem a:active,
     .NavItem a.active {
-        background-color: #7D0000;
-        color: #EAA81B;
-        border-bottom: 4px solid #EAA81B;
+        background-color: #ef3340;
+        color: white;
+        border-bottom: 4px solid white;
     }
 } */

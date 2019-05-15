@@ -21,14 +21,14 @@ const Pedido = ({info,updateState,inputValue}) => {
    
   return (
     <div>
-      <div className="row"><h1>Pedido</h1></div>
+      <div className="row subtitle"><h1>Pedido</h1></div>
       <div className="row weigth font-mayor">
-        <div className="col-2">DESCRIPCIÓN</div>
-        <div className="col-2">CANTIDAD</div>
-        <div className="col-2">CÓDIGO</div>
-        <div className="col-2">PRECIO</div>
-        <div className="col-2">DISPONIBILIDAD</div>
-        <div className="col-2">DÍAS</div>
+        <div className="font-weight-bold col-2">DESCRIPCIÓN</div>
+        <div className="font-weight-bold col-2">CANTIDAD</div>
+        <div className="font-weight-bold col-2">CÓDIGO</div>
+        <div className="font-weight-bold col-2">PRECIO</div>
+        <div className="font-weight-bold col-2">DISPONIBILIDAD</div>
+        <div className="font-weight-bold col-2">DÍAS</div>
       </div>
       {error && <strong>Error: {error}</strong>}
       {loading && <span>Collection: Loading...</span>}
@@ -40,7 +40,7 @@ const Pedido = ({info,updateState,inputValue}) => {
               <div className="col-2">{doc.data().cantidad}</div>
               <div className="col-2">
                 <input
-                  className="width-input"
+                  className="form-control width-input"
                   type="text"
                   value={code}
                   onChange={e => setCode(e.target.value)}
@@ -51,20 +51,20 @@ const Pedido = ({info,updateState,inputValue}) => {
               </div>
               <div className="col-2 padding">{code && <Precio code={code} inputValue={inputValue} />}</div>
               <div className="col-2">
-                <select id="disponibilidad" className="margin">
+                <select id="disponibilidad" className="form-control margin">
                   <option value="Stock" selected>STOCK</option>
                   <option value="Importado">IMPORTADO</option>
                 </select>
               </div>
-              <div className="col-2"><input type="text" className="width-input-dias" value={dias}
+              <div className="col-2"><input type="text" className="form-control width-input-dias" value={dias}
                 onChange={e => setDias(e.target.value)} /></div>
             </div>
           ))}
         </span>
       )}
-      <div className="row"><h1>Comentarios</h1></div>
+      <div className="subtitle form-group row"><h5>Comentarios</h5></div>
       <div className="row">
-        <textarea rows="3" cols="25" id='comentarios' placeholder='Escribe algo...' value={comentario}
+        <textarea className="form-control" rows="3" cols="25" id='comentarios' placeholder='Escribe algo...' value={comentario}
                   onChange={e => setComentario(e.target.value)}>
         </textarea>
       </div>

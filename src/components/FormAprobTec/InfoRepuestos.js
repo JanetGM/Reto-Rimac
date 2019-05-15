@@ -22,8 +22,8 @@ Error:
         <span>
           {value.docs.map(doc => (
             <div key={doc.id}>
-              <h4>Repuestos</h4>
-              <table className="Taller table">
+            <h3 className="subtitle">Repuestos</h3>
+          <table className="Taller table table-hover">
                 <thead>
               <tr>
                 <th scope="col">Descripción</th>
