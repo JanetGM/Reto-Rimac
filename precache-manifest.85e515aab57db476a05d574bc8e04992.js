@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c2967841bb2ad1fbabd7898c00525cc3",
+    "revision": "64981c1ecf59a7aa7dc28b3884795c29",
     "url": "/Reto-Rimac/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Reto-Rimac/static/css/2.1418a333.chunk.css"
   },
   {
-    "revision": "db3ec8162c5c93cef063",
+    "revision": "3e3084b2e35d70abf683",
     "url": "/Reto-Rimac/static/css/main.7eeb9762.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Reto-Rimac/static/js/2.090d7fe6.chunk.js"
   },
   {
-    "revision": "db3ec8162c5c93cef063",
-    "url": "/Reto-Rimac/static/js/main.85593635.chunk.js"
+    "revision": "3e3084b2e35d70abf683",
+    "url": "/Reto-Rimac/static/js/main.9f492684.chunk.js"
   },
   {
     "revision": "5b39d12ed81448e2fa99",
