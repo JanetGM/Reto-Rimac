@@ -4,11 +4,12 @@ import db from '../../lib/firestore';
 
 import Precio from './Precio';
 
-const Pedido = ({info,updateState}) => {
+const Pedido = ({info,updateState,inputValue}) => {
   const [code, setCode] = useState('');
-  const [comentario, setComentario]=useState('');
+  const [comentario, setComentario] = useState('');
   const [dias, setDias] = useState('');
   console.log(info);
+
   const { error, loading, value } = useCollection(
     db.collection('Compras'),
   );
@@ -48,11 +49,11 @@ const Pedido = ({info,updateState}) => {
                   required
                 />
               </div>
-              <div className="col-2 padding">{code && <Precio code={code} />}</div>
+              <div className="col-2 padding">{code && <Precio code={code} inputValue={inputValue} />}</div>
               <div className="col-2">
                 <select id="disponibilidad" className="margin">
-                  <option disabled selected>STOCK</option>
-                  <option value="Water">IMPORTADO</option>
+                  <option value="Stock" selected>STOCK</option>
+                  <option value="Importado">IMPORTADO</option>
                 </select>
               </div>
               <div className="col-2"><input type="text" className="width-input-dias" value={dias}
