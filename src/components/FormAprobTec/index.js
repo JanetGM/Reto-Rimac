@@ -39,7 +39,7 @@ class App extends Component {
                       
                   
                   
-                      <img src="https://i.ibb.co/gPbPWqD/ajustar-presupuesto.png" alt="Smiley face" />
+                      <img src="https://i.ibb.co/VqsFFnr/casos.png" alt="Smiley face" />
                       <h3>Mis Casos</h3>
                   </div></div>
                   
