@@ -1,11 +1,13 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import db from '../../lib/firestore';
 
-const InfoFormTaller = () => {
+const InfoFormTaller = ({info,updateState}) => {
   const { error, loading, value } = useCollection(
     db.collection('modelo_auto'),
   );
+  
+  value && !info.infoAuto && updateState({infoAuto:value.docs[0].data()})
   return (
     <div className="container center margin-option">
     <div className="">
