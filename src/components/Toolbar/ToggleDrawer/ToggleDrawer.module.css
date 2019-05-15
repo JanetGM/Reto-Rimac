@@ -13,11 +13,11 @@
 .toggleDrawer div {
     width: 90%;
     height: 4px;
-    background-color: #7D0000;
+    background-color: #fff;
 }
 
-@media (min-width: 500px) {
+/* @media (min-width: 500px) {
     .toggleDrawer {
         display: none;
     }
-}
+} */

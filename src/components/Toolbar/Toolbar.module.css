@@ -1,21 +1,15 @@
 .Toolbar {
-    height: 100px;
+    height: 80px;
     position: relative;
     overflow: hidden;
     display: flex;
-    background-color: #C95501;
+    background-color: #ff0000;
     justify-content: space-between;
     align-items: center;
     padding: 0 5px;
     box-sizing: border-box;
     z-index: 90;
     width: 100%;
-}
-
-.Toolbar h1 {
-    font-family: 'Cormorant Unicase';
-    color: #7D0000;
-    float: left;
 }
 
 .Logo {
