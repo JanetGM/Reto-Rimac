@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bs-stepper/dist/css/bs-stepper.min.css';
-import Stepper from 'bs-stepper'
+import Stepper from 'bs-stepper';
 import './index.css';
-import InfoTec from './InfoTec'
+import InfoTec from './InfoTec';
+import InfoVehiculo from './InfoVehiculo';
+import ResumenAprob from './ResumenAprob';
 
 class App extends Component {
     constructor() {
       super();
       this.state = {
-        name: 'React',
+
       };
     }
   
@@ -19,11 +21,11 @@ class App extends Component {
         animation: true
       })
     }
-  
+    
     onSubmit(e) {
       e.preventDefault()
     }
-  
+    
     render() {
       return (
         <div>
@@ -33,21 +35,18 @@ class App extends Component {
               <div className="step" data-target="#test-l-1">
                 <button className="step-trigger">
                   <span className="bs-stepper-circle">1</span>
-                  <span className="bs-stepper-label">Email</span>
                 </button>
               </div>
               <div className="line"></div>
               <div className="step" data-target="#test-l-2">
                 <button className="step-trigger">
                   <span className="bs-stepper-circle">2</span>
-                  <span className="bs-stepper-label">Password</span>
                 </button>
               </div>
               <div className="line"></div>
               <div className="step" data-target="#test-l-3">
                 <button className="step-trigger">
                   <span className="bs-stepper-circle">3</span>
-                  <span className="bs-stepper-label">Validate</span>
                 </button>
               </div>
             </div>
@@ -55,20 +54,18 @@ class App extends Component {
               <form onSubmit={this.onSubmit}>
                 <div id="test-l-1" className="content">
                   <div className="form-group">
-                    <label htmlFor="exampleInputEmail1">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                  <InfoVehiculo />
                   </div>
-                  <button className="btn btn-primary" onClick={() => this.stepper.next()}>Next</button>
+                  <button className="btn btn-primary next" onClick={() => this.stepper.next()}>SIGUIENTE</button>
                 </div>
                 <div id="test-l-2" className="content">
                   <div className="form-group">
-                    <label htmlFor="exampleInputPassword1">Password</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                    <ResumenAprob/>
                   </div>
-                  <button className="btn btn-primary" onClick={() => this.stepper.next()}>Next</button>
+                  <button className="btn btn-primary next" onClick={() => this.stepper.next()}>SIGUIENTE</button>
                 </div>
                 <div id="test-l-3" className="content text-center">
-                  <button type="submit" className="btn btn-primary mt-5">Submit</button>
+                  <button type="submit" className="btn btn-primary mt-5">ENVIAR A TALLER</button>
                 </div>
               </form>
             </div>
