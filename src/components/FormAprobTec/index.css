@@ -1,13 +1,40 @@
-section.form-repairs .taller,
-section.form-repairs .page,
-section.form-detail .taller,
-section.form-detail .page,
-section.taller-repuestos .main-title,
-section.taller-repuestos .subtitle {
-    background: #fff;
+* {
+    color: #494f66;
+}
+.card {
+    margin: 0 10% 0 10%;
+    box-shadow: 0 3px 4px 0 rgba(50,50,50,.36);
     border-radius: 6px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0 auto 20px 0;
-    padding: 12px;
+}
+
+.casos-icon, h3 {
+    margin-left: 75%;
+}
+
+.casos-icon {
+    margin-top: -18%;
+}
+
+h3 {
+    margin-top: -6%;
+}
+
+.ajustes-icon {
+    width: 6%;
+    margin-left: 85%;
+    margin-top: -12%;
+}
+
+.ajustes-text {
+    margin-left: 82%;
+    margin-top: -2%;
+}
+
+.box-left {
+    margin-top: 1%;
+    margin-left: 2%;
+}
+.box-right {
+    margin-left: 30%;
+    margin-top: -9%
 }
