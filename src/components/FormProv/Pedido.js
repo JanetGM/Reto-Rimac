@@ -6,12 +6,13 @@ import Precio from './Precio';
 
 const Pedido = ({info,updateState}) => {
   const [code, setCode] = useState('');
-  const [comentario,setComentario]=useState('');
-  const [dias, setDias]=useState('');
+  const [comentario, setComentario]=useState('');
+  const [dias, setDias] = useState('');
+  console.log(info);
   const { error, loading, value } = useCollection(
     db.collection('Compras'),
   );
-   value  && !info.pedido && updateState({pedido:value.docs[0].data()})
+   value  && !info.pedido && updateState({pedido:value.docs[0].data(),code,comentario,dias})
    code  && info.code!==code && updateState({code})
    comentario  && info.comentario!==comentario && updateState({comentario})
    dias  && info.dias!==dias && updateState({dias})
