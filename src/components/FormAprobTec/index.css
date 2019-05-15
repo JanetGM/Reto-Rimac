@@ -78,8 +78,7 @@ margin-top: -7%;
 
 .btn-green {
     background-color: #80bb00;
-    width: 150%;
-    height: 100%;
+    width: 30%;
     color: white;
 }
 
@@ -171,7 +170,7 @@ form{
     display: inline-flex;
     align-content: center;
     justify-content: center;
-    width: 30em;
+    width: 27.4em;
     height: 2em;
     padding: .5em 0;
     margin: .25rem;
@@ -191,4 +190,30 @@ form{
 	align-items: center;
 	justify-content: center;
   }
+
+  .form-control-width{
+      width: 99px;
+  }
   
+
+  .btn-green{
+    width: 286px;
+    height: 42px;
+    margin: 0 1%;
+    color: white;   
+    font-weight: 600;
+    background: #81BB00;
+    border-radius: 6px;
+  }
+
+  
+  .btn-gray{
+    width: 286px;
+    height: 42px;
+    padding: 0;
+    margin: 0 1%;
+    color: white;   
+    font-weight: 600;
+    background: #8A8E8E;
+    border-radius: 6px;
+  }
