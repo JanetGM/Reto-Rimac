@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/Reto-Rimac/static/css/main.ba49ec77.chunk.css",
-    "main.js": "/Reto-Rimac/static/js/main.74bdc022.chunk.js",
-    "main.js.map": "/Reto-Rimac/static/js/main.74bdc022.chunk.js.map",
+    "main.css": "/Reto-Rimac/static/css/main.a286c047.chunk.css",
+    "main.js": "/Reto-Rimac/static/js/main.cec7b750.chunk.js",
+    "main.js.map": "/Reto-Rimac/static/js/main.cec7b750.chunk.js.map",
     "runtime~main.js": "/Reto-Rimac/static/js/runtime~main.4e6a8d30.js",
     "runtime~main.js.map": "/Reto-Rimac/static/js/runtime~main.4e6a8d30.js.map",
-    "static/js/2.b41502e9.chunk.js": "/Reto-Rimac/static/js/2.b41502e9.chunk.js",
-    "static/js/2.b41502e9.chunk.js.map": "/Reto-Rimac/static/js/2.b41502e9.chunk.js.map",
+    "static/css/2.1418a333.chunk.css": "/Reto-Rimac/static/css/2.1418a333.chunk.css",
+    "static/js/2.fb21b465.chunk.js": "/Reto-Rimac/static/js/2.fb21b465.chunk.js",
+    "static/js/2.fb21b465.chunk.js.map": "/Reto-Rimac/static/js/2.fb21b465.chunk.js.map",
     "index.html": "/Reto-Rimac/index.html",
-    "precache-manifest.8be4ef08c7d671716eead95eaa69fecc.js": "/Reto-Rimac/precache-manifest.8be4ef08c7d671716eead95eaa69fecc.js",
+    "precache-manifest.3274fe1fc6107bf60c3390f5d410dff1.js": "/Reto-Rimac/precache-manifest.3274fe1fc6107bf60c3390f5d410dff1.js",
     "service-worker.js": "/Reto-Rimac/service-worker.js",
-    "static/css/main.ba49ec77.chunk.css.map": "/Reto-Rimac/static/css/main.ba49ec77.chunk.css.map",
-    "static/media/logo.svg": "/Reto-Rimac/static/media/logo.ee7cd8ed.svg"
+    "static/css/2.1418a333.chunk.css.map": "/Reto-Rimac/static/css/2.1418a333.chunk.css.map",
+    "static/css/main.a286c047.chunk.css.map": "/Reto-Rimac/static/css/main.a286c047.chunk.css.map"
   }
 }
