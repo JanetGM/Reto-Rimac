@@ -5,14 +5,15 @@ import db from '../../lib/firestore';
 const FormTaller = () => {
   const [dataTaller, setDataTaller] = useState({});
 
-    const sendToDB = () => {
-        db.collection('compras').add(dataTaller);
-    };
+  const sendToDB = () => {
+    db.collection('compras').add(dataTaller);
+    console.log(dataTaller);
+  };
 
   return (
     <>
       <Form
-        values ={data => setDataTaller(data)}
+        values={data => setDataTaller(data)}
         sendToDB={sendToDB}
       />
     </>

@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import useForm from 'react-hook-form';
 
 const createElement = (arr, propiedad, cantidad) => {
-  let element;
-
-  element = [
+  const element = [
     ...arr,
     {
       name: propiedad,
@@ -17,7 +15,6 @@ const createElement = (arr, propiedad, cantidad) => {
 
 const Form = ({ sendToDB, values }) => {
   const { register, handleSubmit, errors } = useForm();
-
   const onSubmit = (data) => {
     values(data);
     sendToDB();
@@ -52,21 +49,14 @@ const Form = ({ sendToDB, values }) => {
                   required: true,
                 })}
               />
-              {' '}
-              {/* register an input */}
               {errors.firstname && errors.firstname.message}
-              {' '}
-              {/* error message */}
             </div>
             <div className="form-group col-sm-3">
               <label htmlFor="celular">CELULAR:</label>
               <br />
               <input className="input-border" placeholder="celular" name="celular" ref={register({ pattern: /\d+/, maxLength: 9 })} />
-              {' '}
               {/* apply pattern validation */}
               {errors.celular && 'Please enter number for celular. Max. 9'}
-              {' '}
-              {/* error message */}
             </div>
 
             <div className="row justify-content-lg-center">
@@ -86,11 +76,7 @@ const Form = ({ sendToDB, values }) => {
                     },
                   })}
                 />
-                {' '}
-                {/* register an input */}
                 {errors.fecha && errors.fecha.message}
-                {' '}
-                {/* error message */}
               </div>
               <div className="form-group col-sm-3">
                 <label htmlFor="marca">MARCA:</label>
@@ -103,11 +89,11 @@ const Form = ({ sendToDB, values }) => {
                     required: true,
                   })}
                 />
-                {' '}
-                {/* register an input */}
+
+
                 {errors.marca && errors.marca.message}
-                {' '}
-                {/* error message */}
+
+
               </div>
               <div className="form-group col-sm-3">
                 <label htmlFor="modelo">MODELO:</label>
@@ -120,11 +106,11 @@ const Form = ({ sendToDB, values }) => {
                     required: true,
                   })}
                 />
-                {' '}
-                {/* register an input */}
+
+
                 {errors.modelo && errors.modelo.message}
-                {' '}
-                {/* error message */}
+
+
               </div>
               <div className="form-group col-sm-3">
                 <label htmlFor="anio">AÑO:</label>
@@ -137,11 +123,28 @@ const Form = ({ sendToDB, values }) => {
                     required: true,
                   })}
                 />
-                {' '}
-                {/* register an input */}
+
+
                 {errors.anio && errors.anio.message}
-                {' '}
-                {/* error message */}
+
+
+              </div>
+              <div className="form-group col-sm-3">
+                <label htmlFor="placa">PLACA:</label>
+                <br />
+                <input
+                  className="input-border"
+                  placeholder="placa"
+                  name="placa"
+                  ref={register({
+                    required: true,
+                  })}
+                />
+
+
+                {errors.marca && errors.marca.message}
+
+
               </div>
               <h3 className="col-sm-12 text-center subtitle">DATOS DE CONTACTO:</h3>
               <div className="form-group col-sm-3">
@@ -153,17 +156,11 @@ const Form = ({ sendToDB, values }) => {
                   name="firstname"
                   ref={register({
                     required: true,
-                    pattern: {
-                      value: /^[A-Z]{1}[a-z]{5,}$/,
-                      message: 'La primera Letra debe ser Mayúscula, solo se admiten letras',
-                    },
                   })}
                 />
-                {' '}
-                {/* register an input */}
                 {errors.firstname && errors.firstname.message}
-                {' '}
-                {/* error message */}
+
+
               </div>
               <div className="form-group col-sm-3">
                 <label htmlFor="lastname">APELLIDOS:</label>
@@ -174,17 +171,9 @@ const Form = ({ sendToDB, values }) => {
                   name="lastname"
                   ref={register({
                     required: true,
-                    pattern: {
-                      value: /^[A-Z]{1}[a-z]{5,}$/,
-                      message: 'La primera Letra debe ser Mayúscula, solo se admiten letras',
-                    },
                   })}
                 />
-                {' '}
-                {/* apply required validation */}
                 {errors.lastname && errors.firstname.message}
-                {' '}
-                {/* error message */}
               </div>
 
             </div>
@@ -195,11 +184,11 @@ const Form = ({ sendToDB, values }) => {
                 <label htmlFor="celular">CELULAR:</label>
                 <br />
                 <input className="input-border" placeholder="celular" name="celular" ref={register({ pattern: /\d+/, maxLength: 9 })} />
-                {' '}
+
                 {/* apply pattern validation */}
                 {errors.celular && 'Please enter number for celular. Max. 9'}
-                {' '}
-                {/* error message */}
+
+
               </div>
               <div className="form-group col-sm-3">
                 <label htmlFor="email">EMAIL: </label>
