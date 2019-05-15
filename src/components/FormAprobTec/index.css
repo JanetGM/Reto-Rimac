@@ -2,12 +2,12 @@
     color: #494f66;
 }
 .card {
-    margin: 0 10% 0 10%;
+    margin: 2% 10% 0 10%;
     box-shadow: 0 3px 4px 0 rgba(50,50,50,.36);
     border-radius: 6px;
 }
 
-.casos-icon, h3 {
+.casos-icon, .caso-text {
     margin-left: 75%;
 }
 
@@ -15,7 +15,7 @@
     margin-top: -18%;
 }
 
-h3 {
+.caso-text {
     margin-top: -6%;
 }
 

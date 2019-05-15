@@ -10,7 +10,7 @@ const InfoTec=()=>(
  
     </div>
       <img className='casos-icon' src="https://i.ibb.co/VqsFFnr/casos.png" alt="Smiley face" />
-      <h3>Mis Casos</h3>
+      <h3 className='caso-text'>Mis Casos</h3>
     </div>
   </div>
         <div className="card m-3">

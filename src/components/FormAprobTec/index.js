@@ -4,6 +4,7 @@ import 'bs-stepper/dist/css/bs-stepper.min.css';
 import Stepper from 'bs-stepper'
 import './index.css';
 import InfoTec from './InfoTec'
+import Siniestro from './Siniestro'
 
 class App extends Component {
     constructor() {
@@ -28,6 +29,7 @@ class App extends Component {
       return (
         <div>
         <InfoTec/>
+       
           <div id="stepper1" className="bs-stepper">
             <div className="bs-stepper-header">
               <div className="step" data-target="#test-l-1">
@@ -67,7 +69,8 @@ class App extends Component {
                   </div>
                   <button className="btn btn-primary" onClick={() => this.stepper.next()}>Next</button>
                 </div>
-                <div id="test-l-3" className="content text-center">
+                <div id="test-l-3"p className="content text-center">
+                <Siniestro/>
                   <button type="submit" className="btn btn-primary mt-5">Submit</button>
                 </div>
               </form>

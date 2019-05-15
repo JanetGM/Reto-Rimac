@@ -1,0 +1,22 @@
+.deducible h3{
+    text-align: left;
+    border-bottom: 1px solid #8a8e8e;
+    display: block;
+    padding: 10px 10px 4px 10px;
+    margin: 10px 10px 4px 10px;
+    font-weight: 700;
+    font-size: 1.17em;
+}
+form{
+    margin-top: 18px;
+    box-sizing: border-box;
+    display: block;
+
+    padding-top: 10px;
+    width: 88%;
+    margin: 0 auto;
+}
+
+
+
+
