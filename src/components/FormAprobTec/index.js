@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component} from 'react';
+import useState from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bs-stepper/dist/css/bs-stepper.min.css';
 import Stepper from 'bs-stepper';
@@ -6,17 +7,21 @@ import './index.css';
 import InfoTec from './InfoTec';
 import InfoVehiculo from './InfoVehiculo';
 import ResumenAprob from './ResumenAprob';
-import InfoRepuestos from './InfoRepuestos';
-import InfoTaller from './InfoTaller';
-
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-
+     info:[],
     };
   }
+
+  inputValue = (obj) => {
+    this.setState({
+      info: {...this.state.info, obj }
+    })
+  };
+   
 
   componentDidMount() {
     this.stepper = new Stepper(document.querySelector('#stepper1'), {
@@ -27,7 +32,7 @@ class App extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-  }
+  };
 
   render() {
     return (
@@ -57,14 +62,7 @@ class App extends Component {
             <form onSubmit={this.onSubmit}>
               <div id="test-l-1" className="content">
                 <div className="form-group">
-                  <InfoVehiculo 
-                  marca={} 
-                  modelo={} 
-                  placa={} 
-                  año={} 
-                  sede={} />
-                  <InfoTaller />
-                  <InfoRepuestos />
+                  <InfoVehiculo />
                 </div>
                 <button className="btn btn-primary next" onClick={() => this.stepper.next()}>SIGUIENTE</button>
               </div>

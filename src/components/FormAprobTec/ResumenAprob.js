@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 
 const ResumenAprob = () => {
-  const [porcentaje, setPorcentaje] = useState('');
-  const [reparacion, setReparacion] = useState('');
-  const [minimo, setMinimo] = useState('');
+  const calculo = () => {
+    const suma = (parseInt(sessionStorage.cantPlanchado) * 55)
+    + (parseInt(sessionStorage.cantPintura) * 15)
+    + (parseInt(sessionStorage.cantRepuestos) * 30);
+    return suma;
+  };
 
   const deducible = () => {
-    if ((parseInt(porcentaje) * parseInt(reparacion) / 100) > parseInt(minimo)) { return (parseInt(porcentaje) * parseInt(reparacion) / 100); }
-    return parseInt(minimo);
+    if ((parseInt(sessionStorage.porcentaje) * parseInt(sessionStorage.reparacion) / 100) >= parseInt(sessionStorage.minimo)) {
+      return (parseInt(sessionStorage.porcentaje) * calculo() / 100);
+    }
+    return parseInt(sessionStorage.minimo);
   };
   return (
     <div>
@@ -35,29 +40,13 @@ const ResumenAprob = () => {
           <div className="form-group row">
             <label htmlFor="inputEmail3" className="col-md-3 col-form-label">Ingresa el porcentaje</label>
             <div className="col-md-3">
-              <input type="number" className="form-control" onChange={e => setPorcentaje(e.target.value)} />
+              <input type="number" className="form-control" onChange={e => sessionStorage.setItem('porcentaje', e.target.value)} />
             </div>
           </div>
-          <fieldset className="form-group">
-            <div className="row">
-              <legend className="col-form-label col-sm-3 pt-0"> Selecciona la moneda</legend>
-              <div className="col-sm-9">
-                <div className="form-check">
-                  <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked />
-                  <label className="form-check-label" htmlFor="gridRadios1">Dólares</label>
-                </div>
-                <div className="form-check">
-                  <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" />
-                  <label className="form-check-label" htmlFor="gridRadios2">Soles</label>
-                </div>
-
-              </div>
-            </div>
-          </fieldset>
           <div className="form-group row">
             <label htmlFor="inputEmail3" className="col-md-3 col-form-label">Monto mínimo (sin IGV)</label>
             <div className="col-md-3">
-              <input type="text" className="form-control" onChange={e => setMinimo(e.target.value)} />
+              <input type="text" className="form-control" onChange={e => sessionStorage.setItem('minimo', e.target.value)} />
             </div>
           </div>
         </form>
@@ -70,7 +59,7 @@ const ResumenAprob = () => {
               <label htmlFor="inputEmail3" className="col-md-3 col-form-label">Planchado</label>
               <label htmlFor="inputEmail3" className="col-md-1 col-form-label">US$</label>
               <div className="col-md-2">
-                <input type="text" className="form-control" />
+                <input type="text" className="form-control" value={parseInt(sessionStorage.cantPlanchado) * 55} />
               </div>
             </div>
 
@@ -78,7 +67,7 @@ const ResumenAprob = () => {
               <label htmlFor="inputEmail3" className="col-md-3 col-form-label">Pintura</label>
               <label htmlFor="inputEmail3" className="col-md-1 col-form-label">US$</label>
               <div className="col-md-2">
-                <input type="text" className="form-control" />
+                <input type="text" className="form-control" value={parseInt(sessionStorage.cantPintura) * 15} />
               </div>
             </div>
 
@@ -86,7 +75,7 @@ const ResumenAprob = () => {
               <label htmlFor="inputEmail3" className="col-md-3 col-form-label">Repuestos</label>
               <label htmlFor="inputEmail3" className="col-md-1 col-form-label">US$</label>
               <div className="col-md-2">
-                <input type="text" className="form-control" />
+                <input type="text" className="form-control" value={parseInt(sessionStorage.cantRepuestos) * 30} />
               </div>
             </div>
 
@@ -102,7 +91,7 @@ const ResumenAprob = () => {
               <label htmlFor="inputEmail3" className="col-md-3 col-form-label">Total Reparación Sin IGV</label>
               <label htmlFor="inputEmail3" className="col-md-1 col-form-label">US$</label>
               <div className="col-md-2">
-                <input type="text" className="form-control" onChange={e => setReparacion(e.target.value)} />
+                <input type="text" className="form-control" value={calculo()} />
               </div>
             </div>
             <div className="form-group row">

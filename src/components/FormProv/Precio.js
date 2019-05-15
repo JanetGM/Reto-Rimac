@@ -1,19 +1,23 @@
-import React from 'react';
-import { useCollection } from 'react-firebase-hooks/firestore';
+import React, { useEffect, useState } from 'react';
 import db from '../../lib/firestore';
 
 
-const Precio = ({code}) => {
-  const { error, loading, value } = useCollection(
-    db.collection('precios_rimac_kia').where('codigo','==', code),
-  );
+const Precio = ({ code, inputValue }) => {
+  const [data, setData] = useState({});
+  useEffect(() => {
+    db.collection('precios_rimac_kia').where('codigo', '==', code)
+      .get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          setData(doc.data());
+          inputValue(doc.data().precioRimac);
+        });
+      });
+  }, [code]);
+
+  // console.log(data);
   return (
     <span className="padding">
-      {error && <strong>Error: {error}</strong>}
-      {loading && <span>Collection: Loading...</span>}
-      {value && value.docs.map(doc => (
-        <div className="col-2">{doc.data().precioRimac}</div>
-      ))}
+      {data.precioRimac}
     </span>
   );
 };

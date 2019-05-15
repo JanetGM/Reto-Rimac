@@ -6,19 +6,20 @@ import db from '../../lib/firestore';
 
 const Index = () =>{
     const [info,setInfo] = useState([]);
+    const [precio, setPrecio] = useState(0);
     console.log(info);
     const updateState = (state) =>{
      setInfo({...info,...state})
     }
+
     const saveInFirebase = () => {
     db.collection('proveedor').add(
-        info
-      );
+        {...info, precio});
     } 
  return (
     <form>
      <InfoFormTaller info={info} updateState={updateState}  />
-     <Pedido info={info} updateState={updateState} />
+     <Pedido info={info} updateState={updateState} inputValue={data => setPrecio(data)} />
      <button type="button" onClick={saveInFirebase}>Enviar</button>
     </form>
    
