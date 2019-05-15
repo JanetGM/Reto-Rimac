@@ -1,13 +1,20 @@
 import React from 'react';
-import './App.css';
-import Index from './components/FormProv/index';
+import { Switch, Route } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-        <Index/>
-    </div>
-  );
-}
+import Layout from './components/Layout';
+import FormTaller from './components/FormTaller';
+import FormProv from './components/FormProv';
+import FormAprobTec from './components/FormAprobTec';
 
-export default App;
+const app = () => (
+  <Layout>
+    <Switch>
+      <Route path="/" exact component={FormTaller} />
+      <Route path="/proveedor" exact component={FormProv} />
+      <Route path="/tech" component={FormAprobTec} />
+      <Route path="/formProv" component={FormProv} />
+    </Switch>
+  </Layout>
+);
+
+export default app;

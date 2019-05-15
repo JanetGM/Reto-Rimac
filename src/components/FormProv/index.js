@@ -10,7 +10,7 @@ const Index = () =>{
      setInfo({...info,...state})
     }
     const saveInFirebase = () => {
-    db.collection('compras').add(
+    db.collection('proveedor').add(
         info
       );
     } 
