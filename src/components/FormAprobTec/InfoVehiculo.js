@@ -1,17 +1,27 @@
-import React, {Component} from 'react';
+import React from 'react';
 import InfoRepuestos from './InfoRepuestos';
 import InfoTaller from './InfoTaller';
+import { useCollection } from 'react-firebase-hooks/firestore';
+import db from '../../lib/firestore';
 
-class InfoVehiculo extends Component {
-    render() {
-        return (
+
+const InfoVehiculo = () => {
+  const { error, loading, value } = useCollection(
+    db.collection('modelo_auto'),
+  );
+  return(<div>
+  {/* {error && <strong>Error: {error}</strong>}
+  {loading && <span>Collection: Loading...</span>}
+  {value && (
+    <span>
+         {value.docs.map(doc => ( 
             <div className=" card datos-vehiculo">
             <div className="box-left">
             <h4>DATOS DE VEHÍCULO:</h4>
             <br></br>
             <div className="info"><span className ="font-weight-bold">Marca: </span>
             <span><span >
-            aqui</span></span>
+            {doc.data().marca}</span></span>
             </div>
             <div className="info">
               <span className="font-weight-bold">Modelo: </span><span>aqui</span>
@@ -35,8 +45,8 @@ class InfoVehiculo extends Component {
                 </div>
                 <InfoTaller />
                 <InfoRepuestos />
-            </div>
-        )
-    }
-}
-export default InfoVehiculo
+            </div> */}
+    
+     }
+</div>)}
+export default InfoVehiculo;

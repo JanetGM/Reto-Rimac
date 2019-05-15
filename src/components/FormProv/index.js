@@ -6,6 +6,7 @@ import db from '../../lib/firestore';
 
 const Index = () =>{
     const [info,setInfo] = useState([]);
+    console.log(info);
     const updateState = (state) =>{
      setInfo({...info,...state})
     }
