@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 const InfoRepuestos = ({description, quantity, code, availability, money, unitPrice, totalPrice, vb, newQuantity}) => (
     <div>
-        <h4>Repuestos</h4>
-        <table className="Taller table">
+        <h3 className="subtitle">Repuestos</h3>
+        <table className="Taller table table-hover">
         <thead>
             <tr>
                 <th scope="col">Descripción</th>
@@ -30,7 +30,7 @@ const InfoRepuestos = ({description, quantity, code, availability, money, unitPr
                 <td scope="col"> Codigo</td>
                 <td scope="col">
                 <form>
-                <input type="number" name="quantity" min="1" max="100"></input>
+                <input className="form-control" type="number" name="quantity" min="1" max="100"></input>
                 </form>  
                 </td>
             </tr>

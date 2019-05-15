@@ -2,12 +2,12 @@ import React from 'react';
 
 const InfoTaller = ({}) => (
     <div>
-    <h4>Mano de Obra - Taller</h4>
-    <h5>Planchado</h5>
-    <table className="Taller table">
+    <h3 className="subtitle">Mano de Obra - Taller</h3>
+    
+    <table className=" table table-hover">
         <thead>
             <tr>
-                <th scope="col">Descripción</th>
+                <th scope="col" >Planchado</th>
                 <th scope="col">Horas</th>
                 <th scope="col">Horas Aprobadas</th>
             </tr>
@@ -24,11 +24,11 @@ const InfoTaller = ({}) => (
             </tr>
         </tbody>
     </table>
-    <h5>Pintura</h5>
-    <table  className="Taller table">
+   
+    <table  className="table table-hover">
         <thead>
             <tr>
-                <th scope="col">Descripción</th>
+                <th scope="col">Pintura</th>
                 <th scope="col">Paños</th>
                 <th scope="col">Paños Aprobadas</th>
             </tr>

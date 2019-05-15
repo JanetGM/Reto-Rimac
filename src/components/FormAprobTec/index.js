@@ -6,6 +6,8 @@ import './index.css';
 import InfoTec from './InfoTec';
 import InfoVehiculo from './InfoVehiculo';
 import ResumenAprob from './ResumenAprob';
+import InfoRepuestos from './InfoRepuestos';
+import InfoTaller from './InfoTaller';
 
 class App extends Component {
     constructor() {
@@ -31,42 +33,40 @@ class App extends Component {
         <div>
         <InfoTec/>
           <div id="stepper1" className="bs-stepper">
-            <div className="bs-stepper-header">
+            <div className="bs-stepper-header center">
               <div className="step" data-target="#test-l-1">
                 <button className="step-trigger">
-                  <span className="bs-stepper-circle">1</span>
+                  <span className="bs-stepper-circle">Datos del vehículo y taller</span>
                 </button>
               </div>
-              <div className="line"></div>
+              
               <div className="step" data-target="#test-l-2">
                 <button className="step-trigger">
-                  <span className="bs-stepper-circle">2</span>
+                  <span className="bs-stepper-circle">Datos del caso y aprobación</span>
                 </button>
               </div>
-              <div className="line"></div>
-              <div className="step" data-target="#test-l-3">
-                <button className="step-trigger">
-                  <span className="bs-stepper-circle">3</span>
-                </button>
-              </div>
+              
             </div>
             <div className="bs-stepper-content">
               <form onSubmit={this.onSubmit}>
                 <div id="test-l-1" className="content">
-                  <div className="form-group">
+                  <div className="form-group ">
                   <InfoVehiculo />
+                  <InfoTaller />
+            <InfoRepuestos />
                   </div>
-                  <button className="btn btn-primary next" onClick={() => this.stepper.next()}>SIGUIENTE</button>
+                  <button className="btn btn-secondary active next" onClick={() => this.stepper.next()}>SIGUIENTE</button>
                 </div>
                 <div id="test-l-2" className="content">
-                  <div className="form-group">
+                  <div className="form-group ">
                     <ResumenAprob/>
                   </div>
-                  <button className="btn btn-primary next" onClick={() => this.stepper.next()}>SIGUIENTE</button>
+                  <button type="submit" className="btn btn-primary mt-5">Ajustar</button>
+                  <button type="submit" className="btn btn-primary mt-5">Observar</button>
+                  <button type="submit" className="btn btn-primary mt-5">Ajustar a cargo</button>
+                  <button type="submit" className="btn btn-primary mt-5">Rechazar</button>
                 </div>
-                <div id="test-l-3" className="content text-center">
-                  <button type="submit" className="btn btn-primary mt-5">ENVIAR A TALLER</button>
-                </div>
+                
               </form>
             </div>
           </div>
