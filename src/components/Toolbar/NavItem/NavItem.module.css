@@ -23,7 +23,7 @@
     color: #EAA81B;
 }
 
-@media (min-width: 500px) {
+/* @media (min-width: 500px) {
     .NavItem {
         margin: 0.2em;
         display: flex;
@@ -49,4 +49,4 @@
         color: #EAA81B;
         border-bottom: 4px solid #EAA81B;
     }
-}
+} */
