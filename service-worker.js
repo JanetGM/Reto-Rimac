@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Reto-Rimac/precache-manifest.7b67b37e11a2e301f58bae792d606a92.js"
+  "/Reto-Rimac/precache-manifest.a6b2368294653c37e4bd2c7e54a34a09.js"
 );
 
 self.addEventListener('message', (event) => {

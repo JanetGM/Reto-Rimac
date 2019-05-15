@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "787c57fbc08fa5237ff3f477f88f1877",
+    "revision": "c2967841bb2ad1fbabd7898c00525cc3",
     "url": "/Reto-Rimac/index.html"
   },
   {
-    "revision": "8ed011571fe81e0fabf6",
+    "revision": "ef9935ef53901198b500",
     "url": "/Reto-Rimac/static/css/2.1418a333.chunk.css"
   },
   {
-    "revision": "42cef24a2d12a95f3b0b",
+    "revision": "db3ec8162c5c93cef063",
     "url": "/Reto-Rimac/static/css/main.7eeb9762.chunk.css"
   },
   {
-    "revision": "8ed011571fe81e0fabf6",
-    "url": "/Reto-Rimac/static/js/2.b0226908.chunk.js"
+    "revision": "ef9935ef53901198b500",
+    "url": "/Reto-Rimac/static/js/2.090d7fe6.chunk.js"
   },
   {
-    "revision": "42cef24a2d12a95f3b0b",
-    "url": "/Reto-Rimac/static/js/main.57c61249.chunk.js"
+    "revision": "db3ec8162c5c93cef063",
+    "url": "/Reto-Rimac/static/js/main.85593635.chunk.js"
   },
   {
     "revision": "5b39d12ed81448e2fa99",
