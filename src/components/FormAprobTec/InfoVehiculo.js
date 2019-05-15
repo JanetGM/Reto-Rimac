@@ -23,12 +23,11 @@ Error:
       <span>
         {value.docs.map(doc => (
           <div className="box-left">
-            <h4>DATOS DE VEHÍCULO:</h4>
+            <h4>Datos de Vehículo:</h4>
             <br />
             <div className="info">
               <span className="font-weight-bold">
                 Marca:
-
               </span>
               <span>{(doc.data().marca)}</span>
               <div className="info">
@@ -37,7 +36,7 @@ Error:
               </div>
               <div className="info">
                 <span className="font-weight-bold">
-N° de motor:
+                N° de motor:
                   {(doc.data().motor)}
                   {' '}
                 </span>
@@ -68,8 +67,6 @@ N° de motor:
           </div>
         ))}
       </span>
-
-
       )}
     </div>
   );

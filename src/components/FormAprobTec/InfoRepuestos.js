@@ -50,7 +50,7 @@ Error:
                 <td scope="col"> {doc.data().precio} </td>
                 <td scope="col"> {cantidadRepuesto * doc.data().precio}</td>
                 <td scope="col"> 
-                <select id="disponibilidad" className="margin">
+                <select id="disponibilidad" className="">
                   <option value="de-acuerdo" selected>DE ACUERDO</option>
                   <option value="desacuerdo">EN DESACUERDO</option>
                 </select>
