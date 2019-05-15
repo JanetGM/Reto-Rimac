@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import styles from './Toolbar.module.css';
-import NavBar from './NavBar';
+// import NavBar from './NavBar';
 import Logo from '../Logo';
 import ToggleDrawer from './ToggleDrawer';
 
@@ -11,11 +11,10 @@ const toolbar = ({ toggleDrawerClicked }) => (
     <div className={styles.Logo}>
       <Logo />
     </div>
-    <h1>RIMAC</h1>
     <ToggleDrawer clicked={toggleDrawerClicked} />
-    <nav className={styles.TabletOnlyPlus}>
+    {/* <nav className={styles.TabletOnlyPlus}>
       <NavBar />
-    </nav>
+    </nav> */}
   </header>
 );
 

@@ -1,0 +1,105 @@
+* {
+    color: #494f66;
+}
+.card {
+    margin: 0 10% 0 10%;
+    box-shadow: 0 3px 4px 0 rgba(50,50,50,.36);
+    border-radius: 6px;
+}
+
+.casos-icon, h3 {
+    margin-left: 75%;
+}
+
+.casos-icon {
+    margin-top: -18%;
+}
+
+h3 {
+    margin-top: -6%;
+}
+
+.ajustes-icon {
+    width: 30px;
+    margin-left: 50%;
+    margin-top: 5%;
+}
+
+.ajustes-text {
+    margin-left: 32%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.btn-red {
+    margin-left: 70%;
+    margin-top: -27%;
+    width: 10%;
+    height: 50%;
+    background-color: #ef3340;
+}
+
+.box-left {
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.box-right, .box-r {
+    margin-left: 30%;
+}
+
+.box-right {
+    margin-top: -11%
+}
+
+.box-r {
+    margin-top: -14%;
+}
+
+.datos-vehiculo {
+    height: 740px;
+}
+
+.next {
+    margin-left: 45%;
+}
+
+.download {
+    width: 40%;
+    height: 40%;
+}
+
+p {
+    margin-left: 65%;    
+}
+
+table {
+    margin-left: 2%;
+}
+
+.deducible h3{
+    text-align: left;
+    border-bottom: 1px solid #8a8e8e;
+    display: block;
+    padding: 10px 10px 4px 10px;
+    margin: 10px 10px 4px 10px;
+    font-weight: 700;
+    font-size: 1.17em;
+}
+form{
+    margin-top: 18px;
+    box-sizing: border-box;
+    display: block;
+
+    padding-top: 10px;
+    width: 88%;
+    margin: 0 auto;
+}
+.img{
+ width: 50px;
+ height: 50px;
+}
+.img-2{
+    width: 50px;
+    height: 50px;
+   }
